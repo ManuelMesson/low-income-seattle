@@ -5,9 +5,9 @@ class Main extends Component {
   render = () => {
     return (
       <main role="main">
-      <Router>
+     
           <Route path="/about" component={About}></Route>
-      </Router>
+   
       </main>
     );
   };

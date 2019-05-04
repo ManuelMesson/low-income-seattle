@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-
+import {Link} from 'react-router-dom';
 class Header extends Component {
   render = () => {
     return (
       <header role="banner" className="App-header">
-        <span>Low Income Seattle</span>
+        <a href="/">Low Income Seattle</a>
         <nav role="navigation" className="header-menu">
-          <a href="/">Home</a>
+        <Link to="/">Home</Link>
           <a href="/contact">Contact</a>
-          <a href="/about">About</a>
+          <Link to='/about'>About</Link>
         </nav>
       </header>
     );
