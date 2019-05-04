@@ -14,9 +14,12 @@
 }
 
 .App-footer {
-  padding: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   background: #222;
-  max-height: 250px;
+  min-height: 150px;
+  width: 100%;
 }
 
 .header-menu {

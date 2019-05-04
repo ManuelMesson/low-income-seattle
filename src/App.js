@@ -3,6 +3,8 @@ import "./App.css";
 
 
 import Header from './components/Header';
+import Footer from './components/Footer';
+
 import Main from './containers/Main';
 import Aside from './containers/Aside';
 class App extends Component {
@@ -14,8 +16,8 @@ class App extends Component {
         <Aside />
         <Main />
         </div>
-
-        <footer role="contentinfo" className="App-footer" />
+        <Footer />
+        
       </div>
     );
   }

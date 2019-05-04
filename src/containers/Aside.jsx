@@ -8,7 +8,6 @@ class Aside extends Component {
             <ul>
               <li>link1</li>
               <li>link1</li>
-              {/* <li><Link to='/about'>About</Link></li> */}
             </ul>
           </div>
         </aside>
