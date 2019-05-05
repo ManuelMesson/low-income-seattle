@@ -29,7 +29,6 @@
 .header-menu a {
   text-decoration: none;
   color: white;
-  /* margin-left: 5px; */
   margin-right: 15px;
 }
 
@@ -39,6 +38,9 @@
 }
 
 .menu {
-  background: #222;
-  color: #ADADAD;
+  background: grey;
+}
+
+.menu ul li {
+  padding: 15px;
 }
