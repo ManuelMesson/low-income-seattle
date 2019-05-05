@@ -1,6 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 25% 75%;
+  margin-bottom: 150px;
 }
 
 .App-header {
@@ -14,12 +15,10 @@
 }
 
 .App-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   background: #222;
-  min-height: 150px;
+  height: 200px;
   width: 100%;
+  /* margin-top: 25px; */
 }
 
 .header-menu {
@@ -43,4 +42,16 @@
 
 .menu ul li {
   padding: 15px;
+}
+
+.card {
+  padding: 100px;
+  background: #222;
+  box-shadow: 2px 2px 2px grey;
+  margin: 15px;
+  color: white;
+}
+
+.card a {
+  color: red;
 }

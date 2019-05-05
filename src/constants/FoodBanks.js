@@ -1,5 +1,3 @@
-import FoodBank from "../containers/FoodBank";
-
 export const FOOD_BANK = [
   {
     id: 1,
