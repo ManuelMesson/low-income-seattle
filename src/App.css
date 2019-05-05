@@ -60,3 +60,11 @@ aside {
   height: 100%;
   min-height: 650px;
 }
+
+.test {
+  text-align: center;
+}
+
+.test a:visited{
+  text-decoration: none;
+}
