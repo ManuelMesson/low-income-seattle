@@ -39,10 +39,6 @@
   background: #222;
 }
 
-.menu ul li {
-  padding: 15px;
-}
-
 .card {
   padding: 15px;
   background: #222;
@@ -56,9 +52,8 @@
 }
 
 aside {
-  background: #222;
   height: 100%;
-  min-height: 650px;
+  min-height: 800px;
 }
 
 .test {
