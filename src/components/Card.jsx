@@ -25,7 +25,7 @@ class Card extends Component {
 
   render = () => {
     const distributionHours = this.props.distributionHours.map(item => (
-      <li>{item}</li>
+      <li key={Math.random()}>{item}</li>
     ));
     return (
       <div className="card">
