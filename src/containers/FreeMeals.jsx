@@ -15,7 +15,7 @@ class FreeMeals extends Component {
     this.fetchFreeMeals();
   };
   render = () => {
-    const { isLoading, data, error } = this.state;
+    const { isLoading, data } = this.state;
 
     return (
       <div>
