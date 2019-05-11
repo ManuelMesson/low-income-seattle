@@ -63,3 +63,7 @@ aside {
 .test a:visited{
   text-decoration: none;
 }
+
+main {
+  padding: 25px;
+}
