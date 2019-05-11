@@ -22,7 +22,9 @@ class Aside extends Component {
               <Link to="/free-meals">
                 <MenuItem>Free Meals</MenuItem>
               </Link>
-              <MenuItem>Public Showers</MenuItem>
+              <Link to="/public-showers">
+                <MenuItem>Public Showers</MenuItem>
+              </Link>
             </MenuList>
           </ClickAwayListener>
         </Paper>
