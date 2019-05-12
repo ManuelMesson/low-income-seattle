@@ -5,16 +5,15 @@ import { Grid, Typography } from "@material-ui/core";
 
 const Title = () => {
   const divStyle = {
-    marginTop: 25,
+    marginTop: 5,
     marginBottom: 25 
   } 
   return (
     <Grid
       container
-      direction="row"
       justify="center"
       alignItems="center"
-      spacing={16}
+      spacing={24}
     >
       <Typography variant="h3" style={divStyle}>List of Seattle Food Banks</Typography>
     </Grid>
@@ -46,7 +45,7 @@ class FoodBank extends Component {
     return (
       <div>
         <Title />
-        <Grid container spacing={16} direction="row">
+        <Grid container spacing={24}>
           {items}
         </Grid>
       </div>
