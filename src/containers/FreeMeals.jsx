@@ -1,6 +1,27 @@
 import React, { Component } from "react";
 
-import { MealCard } from "../components/MealCard";
+import MealCard from "../components/MealCard";
+import { Grid, Typography, CircularProgress } from "@material-ui/core";
+
+const Title = () => {
+  const divStyle = {
+    marginTop: 25,
+    marginBottom: 25
+  };
+  return (
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      spacing={16}
+    >
+      <Typography variant="h3" style={divStyle}>
+        List of Free Meals
+      </Typography>
+    </Grid>
+  );
+};
 class FreeMeals extends Component {
   constructor() {
     super();
@@ -19,28 +40,37 @@ class FreeMeals extends Component {
 
     return (
       <div>
-        {!isLoading ? (
-          data.map(item => {
-            const {
-              day_time,
-              location,
-              meal_served,
-              name_of_program,
-              people_served
-            } = item;
-            return (
-              <MealCard
-                day_time={day_time}
-                location={location}
-                meal_served={meal_served}
-                name_of_program={name_of_program}
-                people_served={people_served}
-              />
-            );
-          })
-        ) : (
-          <p>loading</p>
-        )}
+        <Title />
+        <Grid container spacing={24} direction="row">
+          {!isLoading ? (
+            data.map((item, index) => {
+              const {
+                day_time,
+                location,
+                meal_served,
+                name_of_program,
+                people_served
+              } = item;
+              const id = index;
+              return (
+                <Grid item xs={3}>
+                  <MealCard
+                    key={id}
+                    day_time={day_time}
+                    location={location}
+                    meal_served={meal_served}
+                    name_of_program={name_of_program}
+                    people_served={people_served}
+                  />
+                </Grid>
+              );
+            })
+          ) : (
+            <Grid container justify="center" alignItems="center">
+              <CircularProgress />
+            </Grid>
+          )}
+        </Grid>
       </div>
     );
   };
