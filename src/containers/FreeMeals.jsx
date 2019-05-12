@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import { MealCard } from "../components/MealCard";
+import MealCard from "../components/MealCard";
+import { Grid, Typography, CircularProgress } from "@material-ui/core";
 class FreeMeals extends Component {
   constructor() {
     super();
@@ -18,9 +19,9 @@ class FreeMeals extends Component {
     const { isLoading, data } = this.state;
 
     return (
-      <div>
+      <Grid container spacing={24} direction="row">
         {!isLoading ? (
-          data.map(item => {
+          data.map((item, index) => {
             const {
               day_time,
               location,
@@ -28,20 +29,26 @@ class FreeMeals extends Component {
               name_of_program,
               people_served
             } = item;
+            const id = index;
             return (
-              <MealCard
-                day_time={day_time}
-                location={location}
-                meal_served={meal_served}
-                name_of_program={name_of_program}
-                people_served={people_served}
-              />
+              <Grid item xs={3}>
+                <MealCard
+                  key={id}
+                  day_time={day_time}
+                  location={location}
+                  meal_served={meal_served}
+                  name_of_program={name_of_program}
+                  people_served={people_served}
+                />
+              </Grid>
             );
           })
         ) : (
-          <p>loading</p>
+          <Grid container justify="center" alignItems="center">
+            <CircularProgress />
+          </Grid>
         )}
-      </div>
+      </Grid>
     );
   };
 

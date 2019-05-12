@@ -9,10 +9,10 @@ class Main extends Component {
   render = () => {
     return (
       <main role="main">
-        <Route path="/about" component={About} />
-        <Route path="/food-banks" component={FoodBank} />
-        <Route path="/free-meals" component={FreeMeals} />
-        <Route path="/public-showers" component={PublicShowers} />
+          <Route path="/about" component={About} />
+          <Route path="/food-banks" component={FoodBank} />
+          <Route path="/free-meals" component={FreeMeals} />
+          <Route path="/public-showers" component={PublicShowers} />
       </main>
     );
   };
