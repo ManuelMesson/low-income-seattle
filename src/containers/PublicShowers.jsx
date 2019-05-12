@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ShowerCard from "./../components/ShowerCard";
 import { PUBLIC_SHOWERS } from "./../constants/PublicShowers";
-import { Grid, Typography, Button, Tabs, Tab, AppBar } from "@material-ui/core";
+import { Grid, Typography, Tabs, Tab, AppBar } from "@material-ui/core";
 
 const Title = () => {
   const divStyle = {
@@ -50,7 +50,7 @@ class PublicShowers extends Component {
   handleChange = (event, value) => {
     this.setState({ value });
   };
-  s;
+  
   render = () => {
     const item = this.state.data.map(item => {
       return (
@@ -67,7 +67,6 @@ class PublicShowers extends Component {
       );
     });
 
-    const { value } = this.state;
     return (
       <div>
         <Title />
