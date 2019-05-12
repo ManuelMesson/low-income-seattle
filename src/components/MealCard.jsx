@@ -29,7 +29,7 @@ const MealCard = props => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h6">{props.name_of_program}</Typography>
+        <Typography variant="h6" color="primary">{props.name_of_program}</Typography>
         <Typography variant="subtitle1">
           <address>{props.location}</address>
         </Typography>
