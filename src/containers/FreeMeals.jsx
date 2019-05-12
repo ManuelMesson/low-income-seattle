@@ -5,16 +5,15 @@ import { Grid, Typography, CircularProgress } from "@material-ui/core";
 
 const Title = () => {
   const divStyle = {
-    marginTop: 25,
+    marginTop: 5,
     marginBottom: 25
   };
   return (
     <Grid
       container
-      direction="row"
       justify="center"
       alignItems="center"
-      spacing={16}
+      spacing={24}
     >
       <Typography variant="h3" style={divStyle}>
         List of Free Meals
@@ -41,7 +40,7 @@ class FreeMeals extends Component {
     return (
       <div>
         <Title />
-        <Grid container spacing={24} direction="row">
+        <Grid container spacing={24} >
           {!isLoading ? (
             data.map((item, index) => {
               const {
@@ -66,9 +65,7 @@ class FreeMeals extends Component {
               );
             })
           ) : (
-            <Grid container justify="center" alignItems="center">
               <CircularProgress />
-            </Grid>
           )}
         </Grid>
       </div>

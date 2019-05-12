@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import ShowerCard from "./../components/ShowerCard";
 import { PUBLIC_SHOWERS } from "./../constants/PublicShowers";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Button, Tabs, Tab, AppBar } from "@material-ui/core";
 
 const Title = () => {
   const divStyle = {
-    marginTop: 25,
+    marginTop: 5,
     marginBottom: 25
   };
   return (
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      alignItems="center"
-      spacing={16}
-    >
+    <Grid container justify="center" alignItems="center" spacing={24}>
       <Typography variant="h3" style={divStyle}>
         List of Public Showers
       </Typography>
@@ -24,8 +18,41 @@ const Title = () => {
 };
 
 class PublicShowers extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "all",
+      data: []
+    };
+  }
+
+  componentDidMount = () => {
+    this.setState({ data: PUBLIC_SHOWERS });
+  };
+
+  filterPeopleServed = input => {
+    const result = PUBLIC_SHOWERS.filter(item => {
+      return item.peopleServed === input;
+    });
+    this.setState({ data: result });
+  };
+
+  filterByMen = () => {
+    const result = PUBLIC_SHOWERS.filter(item => {
+      return item.peopleServed === "men";
+    });
+    this.setState({ data: result });
+  };
+
+  displayAll = () => {
+    this.setState({ data: PUBLIC_SHOWERS });
+  };
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+  s;
   render = () => {
-    const item = PUBLIC_SHOWERS.map(item => {
+    const item = this.state.data.map(item => {
       return (
         <Grid item xs={3} key={item.id}>
           <ShowerCard
@@ -39,10 +66,54 @@ class PublicShowers extends Component {
         </Grid>
       );
     });
+
+    const { value } = this.state;
     return (
       <div>
         <Title />
-        <Grid container spacing={16}>
+        <Grid container spacing={24} justify="center" alignContent="center">
+      
+            <AppBar
+              position="static"
+              style={{ marginBottom: 25 }}
+              color="inherit"
+              
+            >
+              <Tabs
+                value={this.state.value}
+                centered
+                onChange={this.handleChange}
+                
+              >
+                <Tab
+                  value="all"
+                  label="Display All"
+                  onClick={this.displayAll}
+                />
+                <Tab
+                  label="Woman Only"
+                  onClick={() => {
+                    this.filterPeopleServed("woman");
+                  }}
+                />
+                <Tab
+                  label="Youth Only"
+                  onClick={() => {
+                    this.filterPeopleServed("youth");
+                  }}
+                />
+                <Tab label="Men Only" onClick={this.filterByMen} />
+                <Tab
+                  label="Seniors 55+"
+                  onClick={() => {
+                    this.filterPeopleServed("senior");
+                  }}
+                />
+              </Tabs>
+            </AppBar>
+        </Grid>
+
+        <Grid container spacing={24}>
           {item}
         </Grid>
       </div>
