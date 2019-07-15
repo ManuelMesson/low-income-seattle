@@ -19,3 +19,8 @@ main {
   min-height: 650px;
   /* background: #FAFAFA; */
 }
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}

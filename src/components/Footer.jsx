@@ -7,7 +7,7 @@ class Footer extends Component {
       <footer role="contentinfo">
         <Grid container spacing={24} justify="center" alignItems="center">
             <Typography>
-              Made with &hearts; by&nbsp;
+              Made in <Link href="https://en.wikipedia.org/wiki/Seattle">Seattle</Link> with &hearts; by&nbsp;
               <Link href="https://github.com/mmesson">Manuel Messon-Roque</Link>
             </Typography>
         </Grid>
