@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "foodBanks": "Food Banks",
+    "freeMeals": "Free Meals",
+    "showers": "Public Showers",
+    "about": "About",
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu"
+  },
+  "home": {
+    "title": "Find help in Seattle.",
+    "tagline": "A directory of food banks, free meals, and public showers for low-income and homeless residents.",
+    "searchPlaceholder": "Search by name or address...",
+    "searchButton": "Search",
+    "cards": {
+      "foodBanks": {
+        "title": "Food Banks",
+        "description": "Weekly groceries, baby supplies, and home delivery across Seattle."
+      },
+      "freeMeals": {
+        "title": "Free Meals",
+        "description": "Live data on free meal programs from the City of Seattle."
+      },
+      "showers": {
+        "title": "Public Showers",
+        "description": "Shower and laundry facilities for adults, women, youth, and seniors."
+      }
+    }
+  },
+  "about": {
+    "title": "About Low Income Seattle",
+    "intro": "Low Income Seattle is a community-built directory of essential services for low-income and homeless residents of Seattle, WA.",
+    "what": "What you'll find",
+    "whatBody": "Up-to-date listings for food banks, free meal programs, and public shower facilities. Each entry includes the address, phone number, opening hours, and eligibility requirements.",
+    "data": "Data sources",
+    "dataBody": "Food bank and shower data is community-maintained. Free meal data is pulled live from the City of Seattle's open data portal.",
+    "contribute": "Contribute",
+    "contributeBody": "Found an error or know of a resource we're missing? Open an issue or pull request on GitHub.",
+    "github": "View on GitHub"
+  },
+  "pages": {
+    "foodBanks": {
+      "title": "Food Banks",
+      "description": "Browse food banks across Seattle. Filter by commodity distribution or home delivery."
+    },
+    "freeMeals": {
+      "title": "Free Meals",
+      "description": "Free meal programs from the City of Seattle open data portal."
+    },
+    "showers": {
+      "title": "Public Showers",
+      "description": "Shower and laundry facilities. Filter by who is served."
+    }
+  },
+  "resources": {
+    "search": "Search resources",
+    "viewList": "List",
+    "viewMap": "Map",
+    "mapUnavailable": "Map unavailable - no coordinates",
+    "empty": "No results match your search.",
+    "error": "Couldn't load results.",
+    "retry": "Try again",
+    "loading": "Loading...",
+    "showing": "Showing {{count}} of {{total}}",
+    "viewDetails": "View details",
+    "callPhone": "Call {{name}}",
+    "visitWebsite": "Visit website",
+    "openInMaps": "Open address in Maps",
+    "lastUpdate": "Last updated: {{date}}",
+    "requirements": "Requirements",
+    "zipCodes": "Areas served",
+    "hours": "Hours",
+    "homeDelivery": "Home delivery",
+    "additionalInfo": "Additional information",
+    "commodityProgram": "Commodity Program"
+  },
+  "filters": {
+    "peopleServed": {
+      "label": "Who is served",
+      "all": "All",
+      "woman": "Women",
+      "men": "Men",
+      "youth": "Youth",
+      "senior": "Seniors",
+      "family": "Families"
+    },
+    "foodBank": {
+      "label": "Filter",
+      "all": "All",
+      "commodity": "Commodity",
+      "homeDelivery": "Home Delivery"
+    },
+    "mealType": {
+      "label": "Meal",
+      "all": "All",
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner"
+    }
+  },
+  "footer": {
+    "tagline": "Built with care for the Seattle community.",
+    "openData": "Free meal data: City of Seattle Open Data",
+    "github": "Source on GitHub"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español",
+    "toggle": "Change language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist.",
+    "back": "Back to home"
+  }
+}

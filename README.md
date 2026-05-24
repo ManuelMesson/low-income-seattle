@@ -1,68 +1,80 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Low Income Seattle
 
-## Available Scripts
+A directory of food banks, free meals, and public showers for low-income and homeless residents of Seattle, WA.
 
-In the project directory, you can run:
+Built with **Vite + React 19 + TypeScript**, styled with **Tailwind v4** and shadcn-style primitives, internationalized in English and Spanish, and tested at every layer (unit + integration + E2E + accessibility).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Three resource directories: food banks, free meal programs, public showers
+- Live free-meal data from the City of Seattle open-data portal
+- Search + chip filters on every resource page (synced to URL `?q=...`)
+- List or map view per page (Leaflet + OpenStreetMap, no API key required)
+- Light / dark / system theme with `localStorage` persistence
+- English / Spanish language toggle
+- Fully responsive, mobile-first, keyboard-navigable, screen-reader friendly
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+```sh
+npm install
+npm run dev          # http://localhost:5173
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scripts
 
-### `npm run build`
+| Script                  | What it does                                              |
+| ----------------------- | --------------------------------------------------------- |
+| `npm run dev`           | Vite dev server                                           |
+| `npm run build`         | Type-check then build for production                      |
+| `npm run preview`       | Serve the production build at http://localhost:4173       |
+| `npm run lint`          | ESLint flat config (with jsx-a11y)                        |
+| `npm run typecheck`     | `tsc --noEmit`                                            |
+| `npm run format`        | Prettier write                                            |
+| `npm run test`          | Vitest watch mode                                         |
+| `npm run test:run`      | One-shot Vitest run                                       |
+| `npm run test:coverage` | Vitest with v8 coverage report                            |
+| `npm run test:e2e`      | Playwright (Chromium / Firefox / WebKit + mobile)         |
+| `npm run test:all`      | typecheck + lint + unit + e2e                             |
+| `npm run geocode`       | One-shot Nominatim enrichment of `src/data/*.json` coords |
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project layout
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+src/
+  main.tsx, App.tsx, index.css
+  components/
+    ui/          shadcn-style primitives (button, card, input, badge, tabs, ...)
+    layout/      Header, Footer, Layout, Theme/Language toggles
+    cards/       FoodBankCard, MealCard, ShowerCard
+    resource/    ResourceSearch, ResourceViewToggle, ResourceMap, Empty/Error states
+  pages/         Home, About, FoodBanks, FreeMeals, PublicShowers, NotFound
+  data/          foodBanks.json, publicShowers.json, loaders.ts
+  hooks/         useFreeMeals, useResourceFilter, useDebouncedValue, useLocalStorage
+  lib/           cn (clsx + tailwind-merge), url helpers
+  i18n/          en.json, es.json, init
+  providers/     ThemeProvider
+  types/         resources.ts
+  test/          setup + provider wrapper
+e2e/             Playwright specs (smoke, search, theme/i18n, map, a11y, mobile)
+scripts/         geocode.ts (one-shot Nominatim enrichment)
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Data
 
-### `npm run eject`
+- `src/data/foodBanks.json` and `src/data/publicShowers.json` are community-maintained.
+  Each entry can include a `coords: { lat, lng }` field to appear on the map; entries
+  without coords still appear in list view.
+- `src/hooks/useFreeMeals.ts` fetches `https://data.seattle.gov/resource/hmzu-x5ed.json`
+  on demand, with loading / success / empty / error states and `AbortController` cleanup.
+- To enrich missing coordinates, add new entries to the JSON without `coords`, then run
+  `npm run geocode` (uses OpenStreetMap's Nominatim at 1 req/sec).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open an issue or a pull request — corrections to listings, new resources, and
+translation improvements are all welcome.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+See [LICENSE](./LICENSE).
