@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "foodBanks": "Bancos de Alimentos",
+    "freeMeals": "Comidas Gratis",
+    "showers": "Duchas Públicas",
+    "about": "Acerca de",
+    "skipToContent": "Saltar al contenido principal",
+    "openMenu": "Abrir menú"
+  },
+  "home": {
+    "title": "Encuentra ayuda en Seattle.",
+    "tagline": "Un directorio de bancos de alimentos, comidas gratis y duchas públicas para residentes de bajos ingresos y sin hogar.",
+    "searchPlaceholder": "Buscar por nombre o dirección...",
+    "searchButton": "Buscar",
+    "cards": {
+      "foodBanks": {
+        "title": "Bancos de Alimentos",
+        "description": "Comestibles semanales, suministros para bebés y entrega a domicilio en Seattle."
+      },
+      "freeMeals": {
+        "title": "Comidas Gratis",
+        "description": "Datos en vivo de programas de comidas gratuitas de la Ciudad de Seattle."
+      },
+      "showers": {
+        "title": "Duchas Públicas",
+        "description": "Instalaciones de duchas y lavandería para adultos, mujeres, jóvenes y personas mayores."
+      }
+    }
+  },
+  "about": {
+    "title": "Acerca de Low Income Seattle",
+    "intro": "Low Income Seattle es un directorio comunitario de servicios esenciales para residentes de bajos ingresos y sin hogar de Seattle, WA.",
+    "what": "Lo que encontrarás",
+    "whatBody": "Listados actualizados de bancos de alimentos, programas de comidas gratuitas e instalaciones públicas de duchas. Cada entrada incluye la dirección, número de teléfono, horario y requisitos de elegibilidad.",
+    "data": "Fuentes de datos",
+    "dataBody": "Los datos de bancos de alimentos y duchas son mantenidos por la comunidad. Los datos de comidas gratuitas provienen en vivo del portal de datos abiertos de la Ciudad de Seattle.",
+    "contribute": "Contribuir",
+    "contributeBody": "¿Encontraste un error o conoces un recurso que falta? Abre un issue o un pull request en GitHub.",
+    "github": "Ver en GitHub"
+  },
+  "pages": {
+    "foodBanks": {
+      "title": "Bancos de Alimentos",
+      "description": "Explora bancos de alimentos en Seattle. Filtra por distribución de productos básicos o entrega a domicilio."
+    },
+    "freeMeals": {
+      "title": "Comidas Gratis",
+      "description": "Programas de comidas gratuitas del portal de datos abiertos de la Ciudad de Seattle."
+    },
+    "showers": {
+      "title": "Duchas Públicas",
+      "description": "Instalaciones de duchas y lavandería. Filtra por a quién se atiende."
+    }
+  },
+  "resources": {
+    "search": "Buscar recursos",
+    "viewList": "Lista",
+    "viewMap": "Mapa",
+    "mapUnavailable": "Mapa no disponible - sin coordenadas",
+    "empty": "Ningún resultado coincide con tu búsqueda.",
+    "error": "No se pudieron cargar los resultados.",
+    "retry": "Reintentar",
+    "loading": "Cargando...",
+    "showing": "Mostrando {{count}} de {{total}}",
+    "viewDetails": "Ver detalles",
+    "callPhone": "Llamar a {{name}}",
+    "visitWebsite": "Visitar sitio web",
+    "openInMaps": "Abrir dirección en Maps",
+    "lastUpdate": "Última actualización: {{date}}",
+    "requirements": "Requisitos",
+    "zipCodes": "Áreas atendidas",
+    "hours": "Horario",
+    "homeDelivery": "Entrega a domicilio",
+    "additionalInfo": "Información adicional",
+    "commodityProgram": "Programa de Productos Básicos"
+  },
+  "filters": {
+    "peopleServed": {
+      "label": "A quién se atiende",
+      "all": "Todos",
+      "woman": "Mujeres",
+      "men": "Hombres",
+      "youth": "Jóvenes",
+      "senior": "Personas Mayores",
+      "family": "Familias"
+    },
+    "foodBank": {
+      "label": "Filtro",
+      "all": "Todos",
+      "commodity": "Productos básicos",
+      "homeDelivery": "Entrega a Domicilio"
+    },
+    "mealType": {
+      "label": "Comida",
+      "all": "Todas",
+      "breakfast": "Desayuno",
+      "lunch": "Almuerzo",
+      "dinner": "Cena"
+    }
+  },
+  "footer": {
+    "tagline": "Construido con cariño para la comunidad de Seattle.",
+    "openData": "Datos de comidas gratuitas: Open Data de la Ciudad de Seattle",
+    "github": "Código en GitHub"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "toggle": "Cambiar tema"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español",
+    "toggle": "Cambiar idioma"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La página que buscas no existe.",
+    "back": "Volver al inicio"
+  }
+}
